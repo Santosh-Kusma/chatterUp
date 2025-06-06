@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatter Up</title>
+    <link rel="stylesheet" href="chat.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="chat-view">
+      <header>
+        <div id="welcome-view">
+          <div class="green-dot"></div>
+          <div id="welcome-msg"></div>
+        </div>
+        <div id="typing-view"></div>
+      </header>
+      <main>
+        <div id="chat-group"></div>
+      </main>
+      <footer>
+        <div id="messages-view">
+          <input type="text" placeholder="Message" id="msg-box" />
+          <button id="send-btn">Send</button>
+        </div>
+      </footer>
+    </section>
+    <section id="connected-users-view">
+      <div id="users-div">
+        <h2>Connected users <strong id="users-count"></strong></h2>
+        <div id="online-users"></div>
+      </div>
+    </section>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
