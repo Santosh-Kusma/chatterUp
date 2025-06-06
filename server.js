@@ -17,7 +17,11 @@ app.set("view engine", ejs);
 app.set("views", path.resolve("src", "views"));
 app.use(express.static("public"));
 
-app.get("/", chatController.getChatView);
+app.get("/", (req, res) => {
+  res.send("Hurray! I have successfully deployed this application on AWS.");
+});
+
+app.get("/chat", chatController.getChatView);
 
 const server = http.createServer(app);
 
